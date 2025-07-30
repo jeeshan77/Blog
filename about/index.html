@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" type="image/x-icon" href="/img/blogfav.ico">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>Responsive Blog Website | About Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        .logo {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: 0;
+            margin-right: 20px;
+            padding-left: 0;
+        }
+
+        .logo img {
+            height: 150px;
+            /* adjust size */
+            width: auto;
+            margin-left: 0;
+
+            padding-left: 0;
+            object-fit: contain;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
+
+
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: relative;
+        }
+
+        .content .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right {
+            height: 100%;
+            width: 55%;
+            padding: 5vw 4vw;
+        }
+
+        .right h1 {
+            font-size: 4vw;
+            line-height: 4.4vw;
+        }
+
+        .right h1 span {
+            color: #FF5E32;
+        }
+
+        .right p {
+            font-size: 1.2vw;
+            font-weight: 600;
+            color: #666;
+            width: 80%;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+        }
+
+        .left {
+            height: 100%;
+            width: 45%;
+            padding: 5vw 4vw;
+        }
+
+        .left img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+
+        .icon {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icon img {
+            height: 32px;
+            width: 32px;
+            object-fit: contain;
+            cursor: pointer;
+        }
+
+        .icon img:hover {
+            /* filter: grayscale(1); */
+            filter: blur(0.5px);
+        }
+
+        /* Responsive Code */
+
+        @media (max-width:425px) {
+
+            .content {
+                flex-direction: column;
+            }
+
+            .right {
+                width: 100%;
+                height: 45%;
+                padding: 4vw 6vw;
+            }
+
+
+            .right h1 {
+                font-size: 9vw;
+                line-height: 9vw;
+            }
+
+            .right p {
+                font-size: 4vw;
+                width: 100%;
+                margin: 5vw 0;
+            }
+
+            .left {
+                width: 100%;
+                height: 55%;
+            }
+        }
+
+        .about-me {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .about-me h2,
+        .about-me h3 {
+            color: #0a3871;
+            margin-bottom: 10px;
+        }
+
+        .about-me ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+
+        /* Responsive Code */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container container-nav">
+            <div class="logo">
+                <img src="/img/JBlogLogo.png" alt="logo">
+            </div>
+            <div class="site-title">
+                <h1>Living The Social Life</h1>
+                <p class="subtitle">A blog exporting minimalism in life</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/Home/">Home</a></li>
+                    <li><a href="" class="current-page">About me</a></li>
+                    <li><a href="/recent/">Recent posts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- <div class="container container-flex">
+         
+         <main role="main">
+            <img src="img/about-me.jpg" class="image-full">
+            
+            <h2>My name is John and living the simple life saved my life</h2>
+            
+            <p><strong>I used to be a pack rat</strong>. I had so many things that I thought that I loved, but the truth was I couldn't even appreciate any lf it because there was too much.</p>
+            <p>Things were terrible. I had a job that I hated, a home that I didn't want to live in, and I couldn't hold a relationship.</p>
+            
+            <h3>How I turned things around</h3>
+            <p><strong>I was on the verge of a breakdown when I got rid of everything</strong>. I literally put 90% of my possessions in the garbage, sold my place and moved into a smaller apartment, and I quit my job.</p>
+            <p>It wasn't easy at all, but everything around me was in such a bad place, I didn't know what else to do. And it worked.</p>
+            
+            <h3>Now I live the simple life</h3>
+            <p>Now that I live simple life, things are so much better. I'm less stressed, enjoy life and work more, and I have more free time to enjoy.</p>
+            <p>With how much it turned my life around, <strong>I felt like I had no choicebut to start sharing how I did it</strong>, and how others can benefit from living a simple life as well, which is why I started this site!</p>
+         
+         </main>
+         
+         <aside class="sidebar">
+            
+            <div class="sidebar-widget">
+               <h2 class="widget-title">RECENT POSTS</h2>
+               
+               <div class="widget-recent-post">
+                  <h3 class="widget-recent-post-title">Keeping cooking simple</h3>
+                  <img src="img/food.jpg" alt="" class="widget-image">
+               </div>
+               
+               <div class="widget-recent-post">
+                  <h3 class="widget-recent-post-title">Simplicity and work</h3>
+                  <img src="img/work.jpg" alt="" class="widget-image">
+               </div>
+               
+               <div class="widget-recent-post">
+                  <h3 class="widget-recent-post-title">Simple decoration</h3>
+                  <img src="img/deco.jpg" alt="" class="widget-image">
+               </div>
+               
+            </div>
+            
+         </aside>
+      </div> -->
+    <div class="content">
+        <div class="left" data-aos="zoom-in-right" data-aos-delay="100" data-aos-easing="ease-in-out">
+            <img src="/img/selfphoto.jpg" alt="">
+        </div>
+
+        <div class="right" data-aos="zoom-in-left" data-aos-delay="100" data-aos-easing="ease-in-out">
+            <h1>Curious Coder <span>Jeeshan</span></h1>
+            <!-- <p>
+                Hello! I'm Aman Yadav, a computer science & engineering college student with a passion for web
+                development. Currently, I'm expanding my skills in HTML, CSS, and JavaScript while exploring various
+                frameworks such as React and Node.js. I'm always looking for new challenges and opportunities to grow as
+                a developer.
+            </p> -->
+            
+            <div class="about-me">
+                <h2><b>About Me</b></h2>
+                <p><b>Hi, I’m Jeeshan — a Passionate Software Developer from Delhi, India.</b></p>
+
+                <p>I'm currently pursuing my <b>Bachelor’s in Computer Applications (BCA)</b>, with a strong interest
+                    in building efficient, user-friendly digital experiences.</p>
+
+                <p><b>Tech Stack & Skills:</b></p>
+                <ul>
+                    <li><b>Frontend:</b> React.js, HTML, CSS, JavaScript</li>
+                    <li><b>Backend:</b> PHP, MySQL</li>
+                    <li><b>Languages:</b> Java, Python</li>
+                </ul>
+
+                <p><b>I love turning ideas into interactive, functional projects that solve real-world problems.
+                        Whether it's a sleek website UI or a fully integrated backend system, I enjoy the challenge
+                        of creating something impactful.</b></p>
+
+                <hr>
+
+                <h3><b>What I Do</b></h3>
+                <ul>
+                    <li>Build dynamic web interfaces using <b>React.js</b></li>
+                    <li>Develop full-stack applications with <b>PHP & MySQL</b></li>
+                    <li>Write clean, maintainable code in <b>Java</b> and <b>Python</b></li>
+                    <li>Design responsive layouts with <b>HTML & CSS</b></li>
+                </ul>
+
+                <hr>
+
+                <h3><b>Goals & Motivation</b></h3>
+                <p>I'm always looking to learn something new, explore modern frameworks, and grow as a developer. My
+                    goal is to become a full-stack developer who builds reliable and scalable solutions that
+                    matter.</p>
+
+                <hr>
+
+                <h3><b>Hobbies</b></h3>
+                <ul>
+                    <li>Creating side projects and experimenting with new tech</li>
+                    <li>Reading about emerging trends in web development</li>
+                    <li>Collaborating on open-source or personal projects</li>
+                    <li>Learning UI/UX principles to improve design thinking</li>
+                </ul>
+
+                <hr>
+
+                <h3><b>Let’s Connect</b></h3>
+                <p>If you’re looking for someone who’s enthusiastic, detail-oriented, and always ready to grow, feel
+                    free to connect with me or check out my projects!</p>
+            </div>
+            <div class="icon" style="margin-left: 30px;">
+                <a href="https://www.linkedin.com/in/jeeshan-gosain/"><img src="/img/linkedin (1).png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+                <!-- <a href="default.asp"><img src="/img/telegram.png" alt="HTML tutorial" style="width:42px;height:42px;"></a> -->
+                <a href="https://github.com/jeeshan77"><img src="/img/github.png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+                <a href="https://www.instagram.com/jaanu_._.7"><img src="/img/instagram (4).png" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+            </div>
+
+            
+            <!-- <div class="icon">
+                <img src="/img/linkedin (1).png" alt="">
+                <img src="/img/telegram.png" alt="">
+                <img src="/img/github.png" alt="">
+                <img src="/img/instagram (4).png" alt="">
+            </div> -->
+        </div>
+    </div>
+    <footer>
+        <p><strong>Living the simple life</strong></p>
+        <p>Copyright &copy; 2025</p>
+        <p>Made with <i class="fas fa-heart"></i> Jeeshan&trade;</p>
+    </footer>
+</body>
+
+</html>
